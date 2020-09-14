@@ -1,0 +1,12 @@
+{
+  "name": "devplace",
+  "displayName": "devplace",
+  "expo": {
+    "name": "devplace",
+    "slug": "devplace",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
