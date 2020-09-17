@@ -8,9 +8,8 @@ import {
 import Animated, { divide } from 'react-native-reanimated';
 import { useScrollHandler } from 'react-native-redash';
 import { Feather } from '@expo/vector-icons';
-
 import { Text, Button, TextInput } from '../../components/MainComponents';
-
+import Dot from './Dot';
 import {
   Container,
   SingleSlide,
@@ -19,8 +18,6 @@ import {
   InsideWhiteCircle,
   ButtonsContainer,
 } from './styles';
-
-import Dot from './Dot';
 
 const { width } = Dimensions.get('window');
 
@@ -48,7 +45,7 @@ const WelcomeScreen: React.FC = () => {
         bounces={false}
         decelerationRate="fast"
         showsHorizontalScrollIndicator={false}
-        {...{ scrollHandler }}
+        {...{ ...scrollHandler }}
       >
         <SingleSlide>
           <Text h1>Bem Vindo!</Text>
@@ -156,6 +153,7 @@ const WelcomeScreen: React.FC = () => {
           flexDirection: 'row',
           alignItems: 'flex-end',
           justifyContent: 'flex-start',
+          bottom: 24,
         }}
       >
         <Dot currentIndex={divide(x, width)} index={0} />
