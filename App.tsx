@@ -1,28 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
+import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { AppLoading } from 'expo';
+import { StyleSheet, View } from 'react-native';
 import {
-  useFonts,
-  Ubuntu_400Regular,
-  Ubuntu_500Medium,
-  Ubuntu_700Bold,
-} from '@expo-google-fonts/ubuntu';
+  FiraMono_400Regular,
+  FiraMono_500Medium,
+  FiraMono_700Bold,
+} from '@expo-google-fonts/fira-mono';
 import {
   OpenSans_400Regular,
   OpenSans_600SemiBold,
   OpenSans_700Bold,
 } from '@expo-google-fonts/open-sans';
 import {
-  FiraMono_400Regular,
-  FiraMono_500Medium,
-  FiraMono_700Bold,
-} from '@expo-google-fonts/fira-mono';
+  useFonts,
+  Ubuntu_400Regular,
+  Ubuntu_500Medium,
+  Ubuntu_700Bold,
+} from '@expo-google-fonts/ubuntu';
+import { AppLoading } from 'expo';
+import { StatusBar } from 'expo-status-bar';
+import Routes from './src/routes';
 
-import WelcomeScreen from './src/pages/WelcomeScreen';
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
-export default function App() {
-  let [fontsLoaded] = useFonts({
+const App: React.FC = () => {
+  const [fontsLoaded] = useFonts({
     Ubuntu_400Regular,
     Ubuntu_500Medium,
     Ubuntu_700Bold,
@@ -41,16 +50,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="light" translucent />
-      <WelcomeScreen />
+      <Routes />
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
