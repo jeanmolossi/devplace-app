@@ -1,15 +1,10 @@
 import React, { useCallback, useRef } from 'react';
-import {
-  Dimensions,
-  View,
-  StyleSheet,
-  KeyboardAvoidingView,
-} from 'react-native';
-import { Modalize } from 'react-native-modalize';
+import { Dimensions } from 'react-native';
 import Animated, { divide } from 'react-native-reanimated';
 import { useScrollHandler } from 'react-native-redash';
 import { Feather } from '@expo/vector-icons';
-import { Text, Button, TextInput } from '../../components/MainComponents';
+import { useNavigation } from '@react-navigation/native';
+import { Text, Button } from '../../components/MainComponents';
 import Dot from './Dot';
 import {
   Container,
@@ -23,10 +18,15 @@ import {
 const { width } = Dimensions.get('window');
 
 const WelcomeScreen: React.FC = () => {
+  const { navigate } = useNavigation();
+
   const scrollViewRef = useRef<Animated.ScrollView>(null);
-  const modalizeRef = useRef<Modalize>(null);
 
   const { scrollHandler, x } = useScrollHandler();
+
+  const gotoLogin = useCallback(() => {
+    navigate('Login');
+  }, []);
 
   const onPress = useCallback((slide: number) => {
     const goToParse = slide - 1;
@@ -36,10 +36,6 @@ const WelcomeScreen: React.FC = () => {
         .getNode()
         .scrollTo({ x: width * goToParse, animated: true });
     }
-  }, []);
-
-  const onOpen = useCallback(() => {
-    modalizeRef.current?.open();
   }, []);
 
   return (
@@ -64,7 +60,7 @@ const WelcomeScreen: React.FC = () => {
 
           <ButtonsContainer>
             <Button
-              onPress={() => onPress(4)}
+              onPress={gotoLogin}
               variant="black"
               text="Pular para login"
             />
@@ -87,7 +83,7 @@ const WelcomeScreen: React.FC = () => {
           </Text>
           <ButtonsContainer>
             <Button
-              onPress={() => onPress(4)}
+              onPress={gotoLogin}
               variant="black"
               text="Pular para login"
             />
@@ -107,11 +103,11 @@ const WelcomeScreen: React.FC = () => {
           </Text>
           <ButtonsContainer>
             <Button
-              onPress={() => onPress(4)}
+              onPress={gotoLogin}
               variant="black"
               text="Pular para login"
             />
-            <Button onPress={() => onPress(4)}>
+            <Button onPress={gotoLogin}>
               <Feather name="arrow-right" color="#fff" size={20} />
             </Button>
           </ButtonsContainer>
@@ -119,70 +115,23 @@ const WelcomeScreen: React.FC = () => {
             <InsideWhiteCircle />
           </OrangeCircle>
         </SingleSlide>
-
-        <SingleSlide>
-          <KeyboardAvoidingView style={{ width: '100%' }} behavior="padding">
-            <Text h1>Bem Vindo ao DevPlace!</Text>
-            <View style={{ width: '100%', marginTop: 16 }}>
-              <TextInput placeholder="Email" style={{ marginBottom: 20 }} />
-              <TextInput placeholder="Senha" />
-
-              <Button
-                variant="black"
-                style={{ marginTop: 16 }}
-                textStyle={{ fontSize: 14, color: '#979797' }}
-                text="Esqueci minha senha"
-              />
-            </View>
-          </KeyboardAvoidingView>
-
-          <View style={{ width: '100%' }}>
-            <Button
-              style={{ marginBottom: 20 }}
-              variant="solid"
-              text="Acessar"
-            />
-
-            <Button
-              textStyle={{ color: '#fff' }}
-              variant="outline"
-              text="Não tenho conta"
-              onPress={onOpen}
-            />
-          </View>
-        </SingleSlide>
       </Animated.ScrollView>
-      <View
+
+      <Animated.View
         style={{
-          ...StyleSheet.absoluteFillObject,
           position: 'absolute',
-          width: width * 3,
+          width,
           flexDirection: 'row',
           alignItems: 'flex-end',
           justifyContent: 'flex-start',
           bottom: 24,
+          left: 36,
         }}
       >
         <Dot currentIndex={divide(x, width)} index={0} />
         <Dot style={{ width: 24 }} currentIndex={divide(x, width)} index={1} />
         <Dot currentIndex={divide(x, width)} index={2} />
-      </View>
-
-      <Modalize
-        ref={modalizeRef}
-        adjustToContentHeight
-        handlePosition="inside"
-        modalStyle={{
-          paddingHorizontal: 16,
-          paddingVertical: 32,
-        }}
-        childrenStyle={{
-          paddingBottom: 34,
-        }}
-      >
-        <Button text="Me cadastrar como Dev" style={{ marginBottom: 16 }} />
-        <Button text="Cadastrar minha empresa" variant="black" />
-      </Modalize>
+      </Animated.View>
     </Container>
   );
 };
