@@ -80,7 +80,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       typescript: {
-        project: '**/tsconfig.json',
+        project: 'tsconfig.json',
       },
     },
     react: { version: 'detect' },
