@@ -3,7 +3,10 @@ import styled from 'styled-components/native';
 
 const { width } = Dimensions.get('window');
 
-export const Container = styled.View``;
+export const Container = styled.View`
+  background-color: #000000;
+  flex: 1;
+`;
 
 export const SingleSlide = styled.View`
   flex: 1;

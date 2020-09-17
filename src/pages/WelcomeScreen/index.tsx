@@ -5,6 +5,7 @@ import {
   StyleSheet,
   KeyboardAvoidingView,
 } from 'react-native';
+import { Modalize } from 'react-native-modalize';
 import Animated, { divide } from 'react-native-reanimated';
 import { useScrollHandler } from 'react-native-redash';
 import { Feather } from '@expo/vector-icons';
@@ -23,6 +24,7 @@ const { width } = Dimensions.get('window');
 
 const WelcomeScreen: React.FC = () => {
   const scrollViewRef = useRef<Animated.ScrollView>(null);
+  const modalizeRef = useRef<Modalize>(null);
 
   const { scrollHandler, x } = useScrollHandler();
 
@@ -34,6 +36,10 @@ const WelcomeScreen: React.FC = () => {
         .getNode()
         .scrollTo({ x: width * goToParse, animated: true });
     }
+  }, []);
+
+  const onOpen = useCallback(() => {
+    modalizeRef.current?.open();
   }, []);
 
   return (
@@ -141,6 +147,7 @@ const WelcomeScreen: React.FC = () => {
               textStyle={{ color: '#fff' }}
               variant="outline"
               text="Não tenho conta"
+              onPress={onOpen}
             />
           </View>
         </SingleSlide>
@@ -160,6 +167,22 @@ const WelcomeScreen: React.FC = () => {
         <Dot style={{ width: 24 }} currentIndex={divide(x, width)} index={1} />
         <Dot currentIndex={divide(x, width)} index={2} />
       </View>
+
+      <Modalize
+        ref={modalizeRef}
+        adjustToContentHeight
+        handlePosition="inside"
+        modalStyle={{
+          paddingHorizontal: 16,
+          paddingVertical: 32,
+        }}
+        childrenStyle={{
+          paddingBottom: 34,
+        }}
+      >
+        <Button text="Me cadastrar como Dev" style={{ marginBottom: 16 }} />
+        <Button text="Cadastrar minha empresa" variant="black" />
+      </Modalize>
     </Container>
   );
 };
