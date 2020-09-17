@@ -1,6 +1,5 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
 import {
   FiraMono_400Regular,
   FiraMono_500Medium,
@@ -21,15 +20,6 @@ import { AppLoading } from 'expo';
 import { StatusBar } from 'expo-status-bar';
 import Routes from './src/routes';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#000',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
 const App: React.FC = () => {
   const [fontsLoaded] = useFonts({
     Ubuntu_400Regular,
@@ -48,10 +38,10 @@ const App: React.FC = () => {
   }
 
   return (
-    <View style={styles.container}>
+    <>
       <StatusBar style="light" translucent />
       <Routes />
-    </View>
+    </>
   );
 };
 

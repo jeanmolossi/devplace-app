@@ -1,25 +1,22 @@
 import React from 'react';
-
 import { createStackNavigator } from '@react-navigation/stack';
+import CreateAccountPF from '../pages/CreateAccountPF';
+import CreateAccountPJ from '../pages/CreateAccountPJ';
 import WelcomeScreen from '../pages/WelcomeScreen';
 
 const { Navigator, Screen } = createStackNavigator();
 
-const LoginStack: React.FC = () => {
+const LoginStack = (): JSX.Element => {
   return (
     <Navigator
       screenOptions={{
-        headerTitle: 'Screen',
-        headerTintColor: '#fff',
-        headerStyle: {
-          backgroundColor: 'transparent',
-          elevation: 0,
-        },
+        headerShown: false,
       }}
       initialRouteName="WelcomeScreen"
     >
       <Screen name="WelcomeScreen" component={WelcomeScreen} />
-      <Screen name="CreateAccount" component={WelcomeScreen} />
+      <Screen name="CreateAccountPJ" component={CreateAccountPJ} />
+      <Screen name="CreateAccountPF" component={CreateAccountPF} />
     </Navigator>
   );
 };
