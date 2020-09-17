@@ -5,12 +5,12 @@ import {
   StyleSheet,
   KeyboardAvoidingView,
 } from 'react-native';
-
 import { Text, Button, TextInput } from '../../components/MainComponents';
+import DefaultLayout from '../../components/MainComponents/DefaultLayout';
 
 const CreateAccountPJ = () => {
   return (
-    <View>
+    <DefaultLayout>
       <TextInput placeholder="Nome Social" />
       <TextInput placeholder="CNPJ" />
       <TextInput placeholder="Email" style={{ marginBottom: 20 }} />
@@ -18,7 +18,7 @@ const CreateAccountPJ = () => {
       <TextInput placeholder="Confirmar Senha" />
 
       <Button style={{ marginBottom: 20 }} variant="solid" text="Criar Conta" />
-    </View>
+    </DefaultLayout>
   );
 };
 

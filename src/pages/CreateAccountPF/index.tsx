@@ -5,19 +5,19 @@ import {
   StyleSheet,
   KeyboardAvoidingView,
 } from 'react-native';
-
 import { Text, Button, TextInput } from '../../components/MainComponents';
+import DefaultLayout from '../../components/MainComponents/DefaultLayout';
 
-const CreateAccountPF = () => {
+const CreateAccountPF: React.FC = () => {
   return (
-    <View>
+    <DefaultLayout>
       <TextInput placeholder="Nome" />
-      <TextInput placeholder="Email" style={{ marginBottom: 20 }} />
+      <TextInput placeholder="Email" />
       <TextInput placeholder="Senha" />
       <TextInput placeholder="Confirmar Senha" />
 
       <Button style={{ marginBottom: 20 }} variant="solid" text="Criar Conta" />
-    </View>
+    </DefaultLayout>
   );
 };
 
