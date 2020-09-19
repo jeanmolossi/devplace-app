@@ -15,13 +15,16 @@ export type AuthenticatedAppScreens = {
 
 export type DrawerRouterScreenProps = {
   route: RouteProp<RootDrawerScreensList, 'RootDrawerScreen'>;
+
   navigation: StackNavigationProp<RootDrawerScreensList, 'RootDrawerScreen'>;
+
   style?: StyleProp<Animated.AnimateStyle<ViewStyle>>;
 };
 
-export type DashboardRouteProps = {
-  route: RouteProp<AuthenticatedAppScreens, 'Dashboard'>;
-  navigation: StackNavigationProp<AuthenticatedAppScreens, 'Dashboard'>;
+export type ScreenRouteProps<T extends keyof AuthenticatedAppScreens> = {
+  route: RouteProp<AuthenticatedAppScreens, T>;
+
+  navigation: StackNavigationProp<AuthenticatedAppScreens, T>;
 };
 
 export type AppRoutesScreenNavigationProps = DrawerNavigationProp<

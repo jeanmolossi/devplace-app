@@ -1,9 +1,11 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import CreateAccountPF from '../pages/CreateAccountPF';
-import CreateAccountPJ from '../pages/CreateAccountPJ';
-import Login from '../pages/Login';
-import WelcomeScreen from '../pages/WelcomeScreen';
+import {
+  Login,
+  WelcomeScreen,
+  CreateAccountPF,
+  CreateAccountPJ,
+} from '../pages';
 
 const { Navigator, Screen } = createStackNavigator();
 
