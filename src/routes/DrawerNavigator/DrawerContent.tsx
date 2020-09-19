@@ -1,5 +1,4 @@
 import React from 'react';
-import { AntDesign } from '@expo/vector-icons';
 import {
   DrawerContentComponentProps,
   DrawerContentOptions,
@@ -43,13 +42,6 @@ const DrawerContent = (
           />
         );
       })}
-
-      <DrawerItem
-        label="Dashboard"
-        onPress={() => navigation.navigate('Dashboard')}
-        icon={() => <AntDesign name="dashboard" color="#fff" size={16} />}
-        {...defaultDrawerItemStyle}
-      />
     </DrawerContentScrollView>
   );
 };
