@@ -1,10 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-import { DashboardRouteProps } from '../../../types/routes';
-import DefaultLayout from '../DefaultLayout';
-import { Text } from '../Text/styles';
+import { Text, DefaultLayout } from '../../components/MainComponents';
+import { ScreenRouteProps } from '../../types/routes';
 
-const Dashboard = (_props: DashboardRouteProps): JSX.Element => {
+type DashboardProps = ScreenRouteProps<'Dashboard'>;
+
+const Dashboard = (_props: DashboardProps): JSX.Element => {
   return (
     <DefaultLayout>
       <View>

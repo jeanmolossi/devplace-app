@@ -5,6 +5,7 @@ import { useScrollHandler } from 'react-native-redash';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { Text, Button } from '../../components/MainComponents';
+import { ScreenRouteProps } from '../../types/routes';
 import Dot from './Dot';
 import {
   Container,
@@ -17,7 +18,9 @@ import {
 
 const { width } = Dimensions.get('window');
 
-const WelcomeScreen: React.FC = () => {
+type WelcomeScreenProps = ScreenRouteProps<'WelcomeScreen'>;
+
+const WelcomeScreen = (_props: WelcomeScreenProps): JSX.Element => {
   const { navigate } = useNavigation();
 
   const scrollViewRef = useRef<Animated.ScrollView>(null);
