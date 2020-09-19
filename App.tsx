@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import { View } from 'react-native';
 import {
   FiraMono_400Regular,
   FiraMono_500Medium,
@@ -38,10 +39,10 @@ const App: React.FC = () => {
   }
 
   return (
-    <>
+    <View style={{ flex: 1, backgroundColor: '#3a3a3a' }}>
       <StatusBar style="light" translucent />
       <Routes />
-    </>
+    </View>
   );
 };
 
