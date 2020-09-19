@@ -69,13 +69,17 @@ module.exports = {
       },
     ],
 
-    'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
+    'react/jsx-filename-extension': [
+      'error',
+      { extensions: ['.ts', '.tsx', '.js', '.jsx'] },
+    ],
     'react/style-prop-object': 'off',
     'react/prop-types': 'off',
     'react/display-name': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
+    'react/no-unused-prop-types': 'off',
   },
   settings: {
     'import/resolver': {
