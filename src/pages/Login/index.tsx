@@ -40,7 +40,12 @@ const Login: React.FC = () => {
         </KeyboardAvoidingView>
 
         <View style={{ width: '100%' }}>
-          <Button style={{ marginBottom: 20 }} variant="solid" text="Acessar" />
+          <Button
+            onPress={() => navigate('Dashboard')}
+            style={{ marginBottom: 20 }}
+            variant="solid"
+            text="Acessar"
+          />
 
           <Button
             textStyle={{ color: '#fff' }}
