@@ -5,7 +5,7 @@ import { Feather } from '@expo/vector-icons';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { useNavigation } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Dashboard from '../../components/MainComponents/Dashboard';
+import Dashboard from '../../pages/Dashboard';
 import WelcomeScreen from '../../pages/WelcomeScreen';
 import {
   DrawerRouterScreenProps,
