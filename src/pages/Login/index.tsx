@@ -2,8 +2,12 @@ import React, { useCallback, useRef } from 'react';
 import { KeyboardAvoidingView, View } from 'react-native';
 import { Modalize } from 'react-native-modalize';
 import { useNavigation } from '@react-navigation/native';
-import { Text, Button, TextInput } from '../../components/MainComponents';
-import DefaultLayout from '../../components/MainComponents/DefaultLayout';
+import {
+  Text,
+  Button,
+  TextInput,
+  DefaultLayout,
+} from '../../components/MainComponents';
 import {
   OrangeCircle,
   SingleSlide,

@@ -1,12 +1,9 @@
-import React, { useCallback, useRef } from 'react';
+import React from 'react';
 import {
-  Dimensions,
-  View,
-  StyleSheet,
-  KeyboardAvoidingView,
-} from 'react-native';
-import { Text, Button, TextInput } from '../../components/MainComponents';
-import DefaultLayout from '../../components/MainComponents/DefaultLayout';
+  Button,
+  TextInput,
+  DefaultLayout,
+} from '../../components/MainComponents';
 
 const CreateAccountPJ = () => {
   return (
