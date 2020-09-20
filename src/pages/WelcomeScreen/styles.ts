@@ -11,9 +11,9 @@ export const Container = styled.View`
 export const SingleSlide = styled.View`
   flex: 1;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: ${width}px;
-  padding: 225px 46px 46px;
+  padding: 125px 46px 46px;
 `;
 
 export const ButtonsContainer = styled.View`

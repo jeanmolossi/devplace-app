@@ -8,6 +8,7 @@ import {
   TextInput,
   DefaultLayout,
 } from '../../components/MainComponents';
+import { useAuth } from '../../hooks/Auth';
 import {
   OrangeCircle,
   SingleSlide,
@@ -15,6 +16,8 @@ import {
 } from '../WelcomeScreen/styles';
 
 const Login: React.FC = () => {
+  const { signIn } = useAuth();
+
   const modalizeRef = useRef<Modalize>(null);
 
   const { navigate } = useNavigation();
@@ -31,8 +34,8 @@ const Login: React.FC = () => {
         <KeyboardAvoidingView style={{ width: '100%' }} behavior="padding">
           <Text h1>Bem Vindo ao DevPlace!</Text>
           <View style={{ width: '100%', marginTop: 16 }}>
-            <TextInput placeholder="Email" style={{ marginBottom: 20 }} />
-            <TextInput placeholder="Senha" />
+            <TextInput placeholder="Email" />
+            <TextInput placeholder="Senha" label="Senha" secureTextEntry />
 
             <Button
               variant="black"
@@ -41,23 +44,23 @@ const Login: React.FC = () => {
               text="Esqueci minha senha"
             />
           </View>
+
+          <View style={{ width: '100%' }}>
+            <Button
+              onPress={() => signIn()}
+              style={{ marginBottom: 20 }}
+              variant="solid"
+              text="Acessar"
+            />
+
+            <Button
+              textStyle={{ color: '#fff' }}
+              variant="outline"
+              text="Não tenho conta"
+              onPress={onOpen}
+            />
+          </View>
         </KeyboardAvoidingView>
-
-        <View style={{ width: '100%' }}>
-          <Button
-            onPress={() => navigate('Dashboard')}
-            style={{ marginBottom: 20 }}
-            variant="solid"
-            text="Acessar"
-          />
-
-          <Button
-            textStyle={{ color: '#fff' }}
-            variant="outline"
-            text="Não tenho conta"
-            onPress={onOpen}
-          />
-        </View>
       </SingleSlide>
 
       <Modalize
