@@ -1,15 +1,19 @@
 import React from 'react';
+import { Feather } from '@expo/vector-icons';
 import {
   DrawerContentComponentProps,
   DrawerContentOptions,
   DrawerContentScrollView,
   DrawerItem,
 } from '@react-navigation/drawer';
+import { useAuth } from '../../hooks/Auth';
 import DrawerItems from './DrawerItems';
 
 const DrawerContent = (
   props: DrawerContentComponentProps<DrawerContentOptions>,
 ): JSX.Element => {
+  const { signOut } = useAuth();
+
   const { navigation } = props;
 
   const contentContainerStyle = {
@@ -42,6 +46,13 @@ const DrawerContent = (
           />
         );
       })}
+
+      <DrawerItem
+        label="Sair"
+        icon={() => <Feather name="power" color="#FC4D4D" size={16} />}
+        onPress={signOut}
+        {...defaultDrawerItemStyle}
+      />
     </DrawerContentScrollView>
   );
 };

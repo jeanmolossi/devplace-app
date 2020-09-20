@@ -19,6 +19,7 @@ import {
 } from '@expo-google-fonts/ubuntu';
 import { AppLoading } from 'expo';
 import { StatusBar } from 'expo-status-bar';
+import { AuthProvider } from './src/hooks/Auth';
 import Routes from './src/routes';
 
 const App: React.FC = () => {
@@ -39,10 +40,12 @@ const App: React.FC = () => {
   }
 
   return (
-    <View style={{ flex: 1, backgroundColor: '#3a3a3a' }}>
-      <StatusBar style="light" translucent />
-      <Routes />
-    </View>
+    <AuthProvider>
+      <View style={{ flex: 1, backgroundColor: '#3a3a3a' }}>
+        <StatusBar style="light" translucent />
+        <Routes />
+      </View>
+    </AuthProvider>
   );
 };
 
