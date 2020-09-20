@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components/native';
-
 import { TextProps } from './index';
 
 const defaultTextConfig = {
@@ -45,21 +44,15 @@ export const Text = styled.Text<TextProps>`
 
   ${props => props.small && defaultTextConfig.small}
 
-  ${props =>
-    props.h6 && defaultTextConfig.h6}
+  ${props => props.h6 && defaultTextConfig.h6}
 
-  ${props =>
-    props.h5 && defaultTextConfig.h5}
+  ${props => props.h5 && defaultTextConfig.h5}
 
-  ${props =>
-    props.h4 && defaultTextConfig.h4}
+  ${props => props.h4 && defaultTextConfig.h4}
 
-  ${props =>
-    props.h3 && defaultTextConfig.h3}
+  ${props => props.h3 && defaultTextConfig.h3}
 
-  ${props =>
-    props.h2 && defaultTextConfig.h2}
+  ${props => props.h2 && defaultTextConfig.h2}
 
-  ${props =>
-    props.h1 && defaultTextConfig.h1}
+  ${props => props.h1 && defaultTextConfig.h1}
 `;

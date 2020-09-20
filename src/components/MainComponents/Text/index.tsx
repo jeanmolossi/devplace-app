@@ -1,6 +1,5 @@
 import React from 'react';
 import { TextProps as RNTextProps } from 'react-native';
-
 import { Text } from './styles';
 
 export interface TextProps extends RNTextProps {

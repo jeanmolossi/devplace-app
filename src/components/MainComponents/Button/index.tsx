@@ -5,7 +5,6 @@ import {
   TouchableOpacityProps,
   ViewStyle,
 } from 'react-native';
-
 import { Button as ButtonComponent, TextButton } from './styles';
 
 type Variants = 'solid' | 'outline' | 'black' | 'gray';

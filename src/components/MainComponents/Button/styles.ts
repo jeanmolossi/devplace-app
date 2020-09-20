@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components/native';
-
 import { ButtonProps } from './index';
 
 const textVariants = {

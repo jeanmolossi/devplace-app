@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
+import { StyleProp, ViewStyle } from 'react-native';
 import { Container } from './styles';
 
-const DefaultLayout: React.FC = ({ children, ...rest }) => {
+type DefaultLayoutProps = {
+  children?: ReactNode;
+  style?: StyleProp<ViewStyle>;
+};
+
+const DefaultLayout = ({
+  children,
+  ...rest
+}: DefaultLayoutProps): JSX.Element => {
   return <Container {...rest}>{children}</Container>;
 };
 
