@@ -1089,10 +1089,10 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/fira-mono/-/fira-mono-0.1.0.tgz#14e9e6747196dd95a37e887f9c33e2606692b74e"
   integrity sha512-t1jFKQrsSUJKZMVQ+xWh0hV8xQeqwaMa4l5yVcuYYnfrDcD9tNWyO2ryO6UIsjf9YwqV0hJMtQT2k8LL060uqw==
 
-"@expo-google-fonts/open-sans@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/open-sans/-/open-sans-0.1.0.tgz#3825d48afa7b9176af7202be28067ad774536819"
-  integrity sha512-haXOb/9IF8UxXIGRUIrXqPDJF/QIicuJUqbBrPUshqJ8q8On4/Om1qPltlfl/ijn/15LYyhIQJRYKfrigJmO4g==
+"@expo-google-fonts/open-sans@^0.4.0":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/open-sans/-/open-sans-0.4.1.tgz#2d3cba5503920786e86557e1044c13ba17327227"
+  integrity sha512-bdm0S56EitHZ4ocgFU/fnANi7Eo5DtD8TcWMd747fpiktniq0uCTcydzW3aAVm9gXZ1q3MeenhHyOutQknL+kQ==
 
 "@expo-google-fonts/source-sans-pro@^0.1.0":
   version "0.1.0"
