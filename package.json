@@ -9,7 +9,7 @@
     "postinstall": "expo-yarn-workspaces postinstall"
   },
   "dependencies": {
-    "@expo-google-fonts/fira-mono": "^0.1.0",
+    "@expo-google-fonts/fira-mono": "^0.4.0",
     "@expo-google-fonts/open-sans": "^0.1.0",
     "@expo-google-fonts/source-sans-pro": "^0.1.0",
     "@expo-google-fonts/ubuntu": "^0.1.0",

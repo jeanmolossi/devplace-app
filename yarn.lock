@@ -1084,10 +1084,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@expo-google-fonts/fira-mono@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/fira-mono/-/fira-mono-0.1.0.tgz#14e9e6747196dd95a37e887f9c33e2606692b74e"
-  integrity sha512-t1jFKQrsSUJKZMVQ+xWh0hV8xQeqwaMa4l5yVcuYYnfrDcD9tNWyO2ryO6UIsjf9YwqV0hJMtQT2k8LL060uqw==
+"@expo-google-fonts/fira-mono@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/fira-mono/-/fira-mono-0.4.0.tgz#ca95d09e60af2334eac5324258ec344b00b8c280"
+  integrity sha512-i925KBsF7mo/huqH9yeoJWJuywBhv22oi/JFX3mpDqHX4rjeDDkRqx38Jemmy6OVDmECoEg4DGNa4ULyGWZkiw==
 
 "@expo-google-fonts/open-sans@^0.1.0":
   version "0.1.0"
