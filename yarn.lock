@@ -1099,10 +1099,10 @@
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/source-sans-pro/-/source-sans-pro-0.1.0.tgz#fdb7b793f396d11ed9ed5ef45bc48fdd1551c8d1"
   integrity sha512-AsjkuHsFUdJlYoTDWRG28hrhuNI0n+9sSHKwTlTea4FfYkWXUBogveD3C1zyaHPw5Qb/DdG+DVxBepfImznFnw==
 
-"@expo-google-fonts/ubuntu@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@expo-google-fonts/ubuntu/-/ubuntu-0.1.0.tgz#c1002c7cdcca246146518504275f8b8bb8ff3acd"
-  integrity sha512-1ZTeMVPkKOi6US4+NkW9/Ul1wHGL6twZ70JUoWDMNjDMkt6I6ygZWZ9QvF5U89LigJQtSeb4qlaizV/ygTB++w==
+"@expo-google-fonts/ubuntu@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/ubuntu/-/ubuntu-0.4.0.tgz#e0a58b8a10458e14d25bc833c4a0424b991ca3cf"
+  integrity sha512-T743viYSs8gBLitS4Gqm1WGPGjNGxQtM1PLbk1IJdjFoPqkLWhD1RJeZ/T5IsXyjxZZjyA3BDFXEMArsCDaXOw==
 
 "@expo/babel-preset-cli@0.2.17":
   version "0.2.17"
